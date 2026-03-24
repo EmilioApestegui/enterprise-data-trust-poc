@@ -2,6 +2,8 @@ from __future__ import annotations
 
 import pandas as pd
 import streamlit as st
+import base64
+from pathlib import Path
 
 from enterprise_data_trust_poc.config import WORKBOOK_PATH, export_paths
 from enterprise_data_trust_poc.db import (
@@ -106,6 +108,7 @@ tabs = st.tabs([
     "4) Data Quality",
     "5) Executive View",
     "6) Adoption & Value",
+    "7) Executive Briefing",
 ])
 
 with tabs[0]:
@@ -312,3 +315,29 @@ with tabs[5]:
 
     st.line_chart(adoption_df.set_index("month_start")[["active_users", "trusted_kpis", "hours_saved_per_week"]])
     st.dataframe(adoption_df, use_container_width=True, hide_index=True)
+
+with tabs[6]:
+
+    st.header("Executive Briefing")
+
+    pdf_path = Path("enterprise_data_trust_poc/data/executive_briefing.pdf")
+
+    if pdf_path.exists():
+
+        with open(pdf_path, "rb") as f:
+            base64_pdf = base64.b64encode(f.read()).decode('utf-8')
+
+        pdf_display = f'''
+        <iframe
+        src="data:application/pdf;base64,{base64_pdf}"
+        width="100%"
+        height="900"
+        type="application/pdf">
+        </iframe>
+        '''
+
+        st.markdown(pdf_display, unsafe_allow_html=True)
+
+    else:
+
+        st.warning("Executive briefing PDF not found.")
