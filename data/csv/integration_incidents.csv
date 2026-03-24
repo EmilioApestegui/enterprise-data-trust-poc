@@ -1,0 +1,4 @@
+incident_id,source_system,interface_name,status,priority,impact_summary,opened_at,resolved_at,root_cause,business_owner
+INC-1042,LATAM franchise FTP,LATAM store sales file,Open,High,Missing May LATAM Beauty store feed created executive inventory/revenue mismatch,2026-01-04 06:55:00,,Expired vendor credential on SFTP endpoint,Director Store Systems
+INC-1034,WMS,Inventory balance feed,Resolved,Medium,Inventory snapshot arrived 29 minutes late; dashboard refresh delayed,2026-01-03 05:58:00,2026-01-03 08:12:00,Batch scheduler contention during overnight close,Director Supply Chain Systems
+INC-1028,Planning,Approved plan feed,Resolved,Low,Plan version label mismatch blocked one certification run,2026-01-02 07:05:00,2026-01-02 07:40:00,Manual file naming inconsistency,FP&A Systems Manager

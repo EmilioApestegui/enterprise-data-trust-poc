@@ -1,0 +1,5 @@
+kpi_name,business_definition,owner,data_steward,source_object,consumer_group,certification_status,certification_reason,refresh_frequency,last_validated_date
+Revenue,Net revenue after returns and approved adjustments,VP Finance,Director of Enterprise Data,sales_actuals + sales_plan,Executive Dashboard,Certified,"Definition aligned, owner assigned, DQ score above threshold",Daily,2026-01-05
+Inventory,Inventory on hand at standard cost,SVP Supply Chain,Director of Enterprise Data,sales_actuals,Store Ops Dashboard,Pending,Cross-system reconciliation still open for LATAM feed,Daily,2026-01-05
+Margin,(Net revenue - product cost) / Net revenue,,Director of Enterprise Data,ERP margin model,Executive Dashboard,Not Trusted,Business owner missing and competing definitions remain,Weekly,2026-01-05
+Plan Attainment,Net revenue / approved plan revenue,VP Finance,Director of Enterprise Data,sales_actuals + sales_plan,Executive Dashboard,Certified,Certified revenue and approved plan version in place,Monthly,2026-01-05

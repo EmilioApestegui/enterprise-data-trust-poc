@@ -1,0 +1,5 @@
+issue_id,status,priority,issue_type,issue_summary,owner,opened_date,resolution_state
+DQ-201,Open,High,Data Quality,Missing May LATAM Beauty plan value blocks complete plan attainment story,VP Finance,2026-01-04,Open
+INT-322,Open,High,Integration,LATAM store sales file missing due to credential failure,Director Store Systems,2026-01-04,Open
+GOV-118,Open,Medium,Governance,Margin KPI has no executive business owner,Chief Data Officer,2026-01-03,In progress
+ADP-071,Resolved,Low,Adoption,Legacy manual weekly pack retired after certified revenue view launched,Director of Analytics,2025-12-18,Closed

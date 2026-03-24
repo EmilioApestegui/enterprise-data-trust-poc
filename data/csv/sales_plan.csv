@@ -1,0 +1,193 @@
+month_start,region,product_category,plan_revenue,plan_units,planning_source,plan_version
+2025-01-01,North America,Fashion Jewelry,1707566.0,50223,Annual Operating Plan,FY25_v1
+2025-01-01,North America,Beauty,1334532.0,47662,Annual Operating Plan,FY25_v1
+2025-01-01,North America,Accessories,1276185.0,37535,Annual Operating Plan,FY25_v1
+2025-01-01,North America,Seasonal,1507025.0,44324,Annual Operating Plan,FY25_v1
+2025-01-01,Europe,Fashion Jewelry,1468493.0,43191,Annual Operating Plan,FY25_v1
+2025-01-01,Europe,Beauty,1147627.0,40987,Annual Operating Plan,FY25_v1
+2025-01-01,Europe,Accessories,1097306.0,32274,Annual Operating Plan,FY25_v1
+2025-01-01,Europe,Seasonal,1296042.0,38119,Annual Operating Plan,FY25_v1
+2025-01-01,Asia,Fashion Jewelry,1342487.0,39485,Annual Operating Plan,FY25_v1
+2025-01-01,Asia,Beauty,1049240.0,37473,Annual Operating Plan,FY25_v1
+2025-01-01,Asia,Accessories,1003168.0,29505,Annual Operating Plan,FY25_v1
+2025-01-01,Asia,Seasonal,1184908.0,34850,Annual Operating Plan,FY25_v1
+2025-01-01,LATAM,Fashion Jewelry,1147836.0,33760,Annual Operating Plan,FY25_v1
+2025-01-01,LATAM,Beauty,897551.0,32055,Annual Operating Plan,FY25_v1
+2025-01-01,LATAM,Accessories,858088.0,25238,Annual Operating Plan,FY25_v1
+2025-01-01,LATAM,Seasonal,1013390.0,29806,Annual Operating Plan,FY25_v1
+2025-02-01,North America,Fashion Jewelry,1697215.0,49918,Annual Operating Plan,FY25_v1
+2025-02-01,North America,Beauty,1327872.0,47424,Annual Operating Plan,FY25_v1
+2025-02-01,North America,Accessories,1270092.0,37356,Annual Operating Plan,FY25_v1
+2025-02-01,North America,Seasonal,1498661.0,44078,Annual Operating Plan,FY25_v1
+2025-02-01,Europe,Fashion Jewelry,1460475.0,42955,Annual Operating Plan,FY25_v1
+2025-02-01,Europe,Beauty,1142787.0,40814,Annual Operating Plan,FY25_v1
+2025-02-01,Europe,Accessories,1092954.0,32146,Annual Operating Plan,FY25_v1
+2025-02-01,Europe,Seasonal,1289735.0,37933,Annual Operating Plan,FY25_v1
+2025-02-01,Asia,Fashion Jewelry,1335706.0,39285,Annual Operating Plan,FY25_v1
+2025-02-01,Asia,Beauty,1045363.0,37334,Annual Operating Plan,FY25_v1
+2025-02-01,Asia,Accessories,999737.0,29404,Annual Operating Plan,FY25_v1
+2025-02-01,Asia,Seasonal,1179691.0,34697,Annual Operating Plan,FY25_v1
+2025-02-01,LATAM,Fashion Jewelry,1142976.0,33617,Annual Operating Plan,FY25_v1
+2025-02-01,LATAM,Beauty,895172.0,31970,Annual Operating Plan,FY25_v1
+2025-02-01,LATAM,Accessories,856091.0,25179,Annual Operating Plan,FY25_v1
+2025-02-01,LATAM,Seasonal,1009867.0,29702,Annual Operating Plan,FY25_v1
+2025-03-01,North America,Fashion Jewelry,1680293.0,49420,Annual Operating Plan,FY25_v1
+2025-03-01,North America,Beauty,1316089.0,47003,Annual Operating Plan,FY25_v1
+2025-03-01,North America,Accessories,1259100.0,37032,Annual Operating Plan,FY25_v1
+2025-03-01,North America,Seasonal,1484506.0,43662,Annual Operating Plan,FY25_v1
+2025-03-01,Europe,Fashion Jewelry,1446804.0,42553,Annual Operating Plan,FY25_v1
+2025-03-01,Europe,Beauty,1133537.0,40483,Annual Operating Plan,FY25_v1
+2025-03-01,Europe,Accessories,1084385.0,31894,Annual Operating Plan,FY25_v1
+2025-03-01,Europe,Seasonal,1278445.0,37601,Annual Operating Plan,FY25_v1
+2025-03-01,Asia,Fashion Jewelry,1323755.0,38934,Annual Operating Plan,FY25_v1
+2025-03-01,Asia,Beauty,1037455.0,37052,Annual Operating Plan,FY25_v1
+2025-03-01,Asia,Accessories,992452.0,29190,Annual Operating Plan,FY25_v1
+2025-03-01,Asia,Seasonal,1169917.0,34409,Annual Operating Plan,FY25_v1
+2025-03-01,LATAM,Fashion Jewelry,1133701.0,33344,Annual Operating Plan,FY25_v1
+2025-03-01,LATAM,Beauty,889351.0,31763,Annual Operating Plan,FY25_v1
+2025-03-01,LATAM,Accessories,850801.0,25024,Annual Operating Plan,FY25_v1
+2025-03-01,LATAM,Seasonal,1002451.0,29484,Annual Operating Plan,FY25_v1
+2025-04-01,North America,Fashion Jewelry,1662512.0,48897,Annual Operating Plan,FY25_v1
+2025-04-01,North America,Beauty,1303636.0,46558,Annual Operating Plan,FY25_v1
+2025-04-01,North America,Accessories,1247466.0,36690,Annual Operating Plan,FY25_v1
+2025-04-01,North America,Seasonal,1469594.0,43223,Annual Operating Plan,FY25_v1
+2025-04-01,Europe,Fashion Jewelry,1432392.0,42129,Annual Operating Plan,FY25_v1
+2025-04-01,Europe,Beauty,1123711.0,40133,Annual Operating Plan,FY25_v1
+2025-04-01,Europe,Accessories,1075264.0,31625,Annual Operating Plan,FY25_v1
+2025-04-01,Europe,Seasonal,1266502.0,37250,Annual Operating Plan,FY25_v1
+2025-04-01,Asia,Fashion Jewelry,1311126.0,38563,Annual Operating Plan,FY25_v1
+2025-04-01,Asia,Beauty,1029020.0,36751,Annual Operating Plan,FY25_v1
+2025-04-01,Asia,Accessories,984661.0,28961,Annual Operating Plan,FY25_v1
+2025-04-01,Asia,Seasonal,1159546.0,34104,Annual Operating Plan,FY25_v1
+2025-04-01,LATAM,Fashion Jewelry,1123848.0,33054,Annual Operating Plan,FY25_v1
+2025-04-01,LATAM,Beauty,883079.0,31539,Annual Operating Plan,FY25_v1
+2025-04-01,LATAM,Accessories,845080.0,24855,Annual Operating Plan,FY25_v1
+2025-04-01,LATAM,Seasonal,994526.0,29251,Annual Operating Plan,FY25_v1
+2025-05-01,North America,Fashion Jewelry,1649790.0,48523,Annual Operating Plan,FY25_v1
+2025-05-01,North America,Beauty,1295127.0,46255,Annual Operating Plan,FY25_v1
+2025-05-01,North America,Accessories,1239606.0,36459,Annual Operating Plan,FY25_v1
+2025-05-01,North America,Seasonal,1459141.0,42916,Annual Operating Plan,FY25_v1
+2025-05-01,Europe,Fashion Jewelry,1422335.0,41833,Annual Operating Plan,FY25_v1
+2025-05-01,Europe,Beauty,1117280.0,39903,Annual Operating Plan,FY25_v1
+2025-05-01,Europe,Accessories,1069391.0,31453,Annual Operating Plan,FY25_v1
+2025-05-01,Europe,Seasonal,1258398.0,37012,Annual Operating Plan,FY25_v1
+2025-05-01,Asia,Fashion Jewelry,1302480.0,38308,Annual Operating Plan,FY25_v1
+2025-05-01,Asia,Beauty,1023689.0,36560,Annual Operating Plan,FY25_v1
+2025-05-01,Asia,Accessories,979840.0,28819,Annual Operating Plan,FY25_v1
+2025-05-01,Asia,Seasonal,1152685.0,33902,Annual Operating Plan,FY25_v1
+2025-05-01,LATAM,Fashion Jewelry,1117396.0,32865,Annual Operating Plan,FY25_v1
+2025-05-01,LATAM,Beauty,,31409,Annual Operating Plan,FY25_v1
+2025-05-01,LATAM,Accessories,841895.0,24762,Annual Operating Plan,FY25_v1
+2025-05-01,LATAM,Seasonal,989599.0,29106,Annual Operating Plan,FY25_v1
+2025-06-01,North America,Fashion Jewelry,1646811.0,48436,Annual Operating Plan,FY25_v1
+2025-06-01,North America,Beauty,1294215.0,46222,Annual Operating Plan,FY25_v1
+2025-06-01,North America,Accessories,1239011.0,36442,Annual Operating Plan,FY25_v1
+2025-06-01,North America,Seasonal,1457274.0,42861,Annual Operating Plan,FY25_v1
+2025-06-01,Europe,Fashion Jewelry,1420662.0,41784,Annual Operating Plan,FY25_v1
+2025-06-01,Europe,Beauty,1117387.0,39907,Annual Operating Plan,FY25_v1
+2025-06-01,Europe,Accessories,1069771.0,31464,Annual Operating Plan,FY25_v1
+2025-06-01,Europe,Seasonal,1257683.0,36991,Annual Operating Plan,FY25_v1
+2025-06-01,Asia,Fashion Jewelry,1301500.0,38279,Annual Operating Plan,FY25_v1
+2025-06-01,Asia,Beauty,1024335.0,36583,Annual Operating Plan,FY25_v1
+2025-06-01,Asia,Accessories,980736.0,28845,Annual Operating Plan,FY25_v1
+2025-06-01,Asia,Seasonal,1152580.0,33899,Annual Operating Plan,FY25_v1
+2025-06-01,LATAM,Fashion Jewelry,1117492.0,32867,Annual Operating Plan,FY25_v1
+2025-06-01,LATAM,Beauty,880944.0,31462,Annual Operating Plan,FY25_v1
+2025-06-01,LATAM,Accessories,843594.0,24812,Annual Operating Plan,FY25_v1
+2025-06-01,LATAM,Seasonal,990443.0,29131,Annual Operating Plan,FY25_v1
+2025-07-01,North America,Fashion Jewelry,1655870.0,48702,Annual Operating Plan,FY25_v1
+2025-07-01,North America,Beauty,1302688.0,46525,Annual Operating Plan,FY25_v1
+2025-07-01,North America,Accessories,1247394.0,36688,Annual Operating Plan,FY25_v1
+2025-07-01,North America,Seasonal,1466018.0,43118,Annual Operating Plan,FY25_v1
+2025-07-01,Europe,Fashion Jewelry,1429351.0,42040,Annual Operating Plan,FY25_v1
+2025-07-01,Europe,Beauty,1125571.0,40199,Annual Operating Plan,FY25_v1
+2025-07-01,Europe,Accessories,1077878.0,31702,Annual Operating Plan,FY25_v1
+2025-07-01,Europe,Seasonal,1266100.0,37238,Annual Operating Plan,FY25_v1
+2025-07-01,Asia,Fashion Jewelry,1309992.0,38529,Annual Operating Plan,FY25_v1
+2025-07-01,Asia,Beauty,1032366.0,36870,Annual Operating Plan,FY25_v1
+2025-07-01,Asia,Accessories,988696.0,29079,Annual Operating Plan,FY25_v1
+2025-07-01,Asia,Seasonal,1160824.0,34142,Annual Operating Plan,FY25_v1
+2025-07-01,LATAM,Fashion Jewelry,1125679.0,33108,Annual Operating Plan,FY25_v1
+2025-07-01,LATAM,Beauty,888737.0,31741,Annual Operating Plan,FY25_v1
+2025-07-01,LATAM,Accessories,851327.0,25039,Annual Operating Plan,FY25_v1
+2025-07-01,LATAM,Seasonal,998418.0,29365,Annual Operating Plan,FY25_v1
+2025-08-01,North America,Fashion Jewelry,1676316.0,49303,Annual Operating Plan,FY25_v1
+2025-08-01,North America,Beauty,1320039.0,47144,Annual Operating Plan,FY25_v1
+2025-08-01,North America,Accessories,1264270.0,37184,Annual Operating Plan,FY25_v1
+2025-08-01,North America,Seasonal,1484798.0,43671,Annual Operating Plan,FY25_v1
+2025-08-01,Europe,Fashion Jewelry,1447840.0,42584,Annual Operating Plan,FY25_v1
+2025-08-01,Europe,Beauty,1141396.0,40764,Annual Operating Plan,FY25_v1
+2025-08-01,Europe,Accessories,1093293.0,32156,Annual Operating Plan,FY25_v1
+2025-08-01,Europe,Seasonal,1283155.0,37740,Annual Operating Plan,FY25_v1
+2025-08-01,Asia,Fashion Jewelry,1327445.0,39042,Annual Operating Plan,FY25_v1
+2025-08-01,Asia,Beauty,1047383.0,37407,Annual Operating Plan,FY25_v1
+2025-08-01,Asia,Accessories,1003339.0,29510,Annual Operating Plan,FY25_v1
+2025-08-01,Asia,Seasonal,1176965.0,34617,Annual Operating Plan,FY25_v1
+2025-08-01,LATAM,Fashion Jewelry,1141520.0,33574,Annual Operating Plan,FY25_v1
+2025-08-01,LATAM,Beauty,902498.0,32232,Annual Operating Plan,FY25_v1
+2025-08-01,LATAM,Accessories,864767.0,25434,Annual Operating Plan,FY25_v1
+2025-08-01,LATAM,Seasonal,1013139.0,29798,Annual Operating Plan,FY25_v1
+2025-09-01,North America,Fashion Jewelry,1704711.0,50139,Annual Operating Plan,FY25_v1
+2025-09-01,North America,Beauty,1343587.0,47985,Annual Operating Plan,FY25_v1
+2025-09-01,North America,Accessories,1287072.0,37855,Annual Operating Plan,FY25_v1
+2025-09-01,North America,Seasonal,1510583.0,44429,Annual Operating Plan,FY25_v1
+2025-09-01,Europe,Fashion Jewelry,1473169.0,43328,Annual Operating Plan,FY25_v1
+2025-09-01,Europe,Beauty,1162555.0,41520,Annual Operating Plan,FY25_v1
+2025-09-01,Europe,Accessories,1113810.0,32759,Annual Operating Plan,FY25_v1
+2025-09-01,Europe,Seasonal,1306238.0,38419,Annual Operating Plan,FY25_v1
+2025-09-01,Asia,Fashion Jewelry,1351152.0,39740,Annual Operating Plan,FY25_v1
+2025-09-01,Asia,Beauty,1067277.0,38117,Annual Operating Plan,FY25_v1
+2025-09-01,Asia,Accessories,1022646.0,30078,Annual Operating Plan,FY25_v1
+2025-09-01,Asia,Seasonal,1198619.0,35254,Annual Operating Plan,FY25_v1
+2025-09-01,LATAM,Fashion Jewelry,1162703.0,34197,Annual Operating Plan,FY25_v1
+2025-09-01,LATAM,Beauty,920424.0,32872,Annual Operating Plan,FY25_v1
+2025-09-01,LATAM,Accessories,882192.0,25947,Annual Operating Plan,FY25_v1
+2025-09-01,LATAM,Seasonal,1032568.0,30370,Annual Operating Plan,FY25_v1
+2025-10-01,North America,Fashion Jewelry,1735668.0,51049,Annual Operating Plan,FY25_v1
+2025-10-01,North America,Beauty,1369134.0,48898,Annual Operating Plan,FY25_v1
+2025-10-01,North America,Accessories,1311787.0,38582,Annual Operating Plan,FY25_v1
+2025-10-01,North America,Seasonal,1538627.0,45254,Annual Operating Plan,FY25_v1
+2025-10-01,Europe,Fashion Jewelry,1500705.0,44138,Annual Operating Plan,FY25_v1
+2025-10-01,Europe,Beauty,1185434.0,42337,Annual Operating Plan,FY25_v1
+2025-10-01,Europe,Accessories,1135973.0,33411,Annual Operating Plan,FY25_v1
+2025-10-01,Europe,Seasonal,1331267.0,39155,Annual Operating Plan,FY25_v1
+2025-10-01,Asia,Fashion Jewelry,1376876.0,40496,Annual Operating Plan,FY25_v1
+2025-10-01,Asia,Beauty,1088743.0,38884,Annual Operating Plan,FY25_v1
+2025-10-01,Asia,Accessories,1043458.0,30690,Annual Operating Plan,FY25_v1
+2025-10-01,Asia,Seasonal,1222051.0,35943,Annual Operating Plan,FY25_v1
+2025-10-01,LATAM,Fashion Jewelry,1185609.0,34871,Annual Operating Plan,FY25_v1
+2025-10-01,LATAM,Beauty,939693.0,33560,Annual Operating Plan,FY25_v1
+2025-10-01,LATAM,Accessories,900902.0,26497,Annual Operating Plan,FY25_v1
+2025-10-01,LATAM,Seasonal,1053516.0,30986,Annual Operating Plan,FY25_v1
+2025-11-01,North America,Fashion Jewelry,1763177.0,51858,Annual Operating Plan,FY25_v1
+2025-11-01,North America,Beauty,1391992.0,49714,Annual Operating Plan,FY25_v1
+2025-11-01,North America,Accessories,1333929.0,39233,Annual Operating Plan,FY25_v1
+2025-11-01,North America,Seasonal,1563631.0,45989,Annual Operating Plan,FY25_v1
+2025-11-01,Europe,Fashion Jewelry,1525272.0,44861,Annual Operating Plan,FY25_v1
+2025-11-01,Europe,Beauty,1205998.0,43071,Annual Operating Plan,FY25_v1
+2025-11-01,Europe,Accessories,1155921.0,33998,Annual Operating Plan,FY25_v1
+2025-11-01,Europe,Seasonal,1353678.0,39814,Annual Operating Plan,FY25_v1
+2025-11-01,Asia,Fashion Jewelry,1399886.0,41173,Annual Operating Plan,FY25_v1
+2025-11-01,Asia,Beauty,1108093.0,39575,Annual Operating Plan,FY25_v1
+2025-11-01,Asia,Accessories,1062245.0,31242,Annual Operating Plan,FY25_v1
+2025-11-01,Asia,Seasonal,1243090.0,36561,Annual Operating Plan,FY25_v1
+2025-11-01,LATAM,Fashion Jewelry,1206197.0,35476,Annual Operating Plan,FY25_v1
+2025-11-01,LATAM,Beauty,957154.0,34184,Annual Operating Plan,FY25_v1
+2025-11-01,LATAM,Accessories,917882.0,26997,Annual Operating Plan,FY25_v1
+2025-11-01,LATAM,Seasonal,1072420.0,31542,Annual Operating Plan,FY25_v1
+2025-12-01,North America,Fashion Jewelry,1782068.0,52414,Annual Operating Plan,FY25_v1
+2025-12-01,North America,Beauty,1408130.0,50290,Annual Operating Plan,FY25_v1
+2025-12-01,North America,Accessories,1349644.0,39695,Annual Operating Plan,FY25_v1
+2025-12-01,North America,Seasonal,1581040.0,46501,Annual Operating Plan,FY25_v1
+2025-12-01,Europe,Fashion Jewelry,1542423.0,45365,Annual Operating Plan,FY25_v1
+2025-12-01,Europe,Beauty,1220780.0,43599,Annual Operating Plan,FY25_v1
+2025-12-01,Europe,Accessories,1170338.0,34422,Annual Operating Plan,FY25_v1
+2025-12-01,Europe,Seasonal,1369553.0,40281,Annual Operating Plan,FY25_v1
+2025-12-01,Asia,Fashion Jewelry,1416115.0,41650,Annual Operating Plan,FY25_v1
+2025-12-01,Asia,Beauty,1122157.0,40077,Annual Operating Plan,FY25_v1
+2025-12-01,Asia,Accessories,1075975.0,31646,Annual Operating Plan,FY25_v1
+2025-12-01,Asia,Seasonal,1258153.0,37004,Annual Operating Plan,FY25_v1
+2025-12-01,LATAM,Fashion Jewelry,1220993.0,35912,Annual Operating Plan,FY25_v1
+2025-12-01,LATAM,Beauty,970100.0,34646,Annual Operating Plan,FY25_v1
+2025-12-01,LATAM,Accessories,930544.0,27369,Annual Operating Plan,FY25_v1
+2025-12-01,LATAM,Seasonal,1086220.0,31948,Annual Operating Plan,FY25_v1

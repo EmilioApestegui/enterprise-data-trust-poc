@@ -1,0 +1,8 @@
+report_month,kpi_name,function_name,reported_value,definition_summary,source_system,owner,refresh_timestamp
+2025-12-01,Revenue,Finance,126800000.0,Net revenue after returns,ERP + POS,VP Finance,2026-01-03 08:00:00
+2025-12-01,Revenue,Merchandising,131100000.0,Gross sales before returns,POS,Chief Merchandising Officer,2026-01-02 17:30:00
+2025-12-01,Revenue,Supply Chain,122900000.0,Shipped revenue excluding backorders,WMS + ERP,SVP Supply Chain,2026-01-02 06:45:00
+2025-12-01,Inventory,Finance,18450000.0,Inventory carrying value,ERP,VP Finance,2026-01-03 08:00:00
+2025-12-01,Inventory,Supply Chain,17980000.0,On-hand units converted to standard cost,WMS,SVP Supply Chain,2026-01-02 06:45:00
+2025-12-01,Margin,Finance,0.428,Net margin after markdowns and returns,ERP,VP Finance,2026-01-03 08:00:00
+2025-12-01,Margin,Merchandising,0.463,Gross margin before returns,POS,Chief Merchandising Officer,2026-01-02 17:30:00

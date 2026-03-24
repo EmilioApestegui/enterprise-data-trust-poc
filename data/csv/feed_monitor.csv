@@ -1,0 +1,6 @@
+snapshot_time,source_system,interface_name,sla_minutes,latency_minutes,status,rows_received,expected_rows
+2026-01-05 06:30:00,POS,Store sales feed,30,18,Healthy,128000,128000
+2026-01-05 06:30:00,Digital Commerce,Ecommerce orders feed,30,22,Healthy,25500,25500
+2026-01-05 06:30:00,WMS,Inventory balance feed,45,74,Late,14800,14800
+2026-01-05 06:30:00,Planning,Approved plan feed,120,0,Healthy,192,192
+2026-01-05 06:30:00,LATAM franchise FTP,LATAM store sales file,60,815,Failed,0,4200

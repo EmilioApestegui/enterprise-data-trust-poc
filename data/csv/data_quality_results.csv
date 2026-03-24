@@ -1,0 +1,7 @@
+run_date,dataset_name,rule_name,severity,status,affected_records,quality_score,issue_detail
+2026-01-05,sales_actuals,Null net revenue,High,Pass,0,100.0,All fact rows contain net revenue
+2026-01-05,sales_plan,Missing approved plan,High,Fail,1,99.5,LATAM Beauty May plan_revenue is null
+2026-01-05,sales_actuals,Returns rate exceeds 20%,Medium,Fail,1,99.5,Europe Seasonal Ecommerce Sep returns outlier
+2026-01-05,sales_actuals,Feed received within SLA,High,Fail,1,99.0,LATAM Beauty Store May feed was not received on time
+2026-01-05,kpi_registry,Missing KPI owner,Medium,Fail,1,75.0,Margin has no assigned business owner
+2026-01-05,certified_sales_summary,Certified KPI completeness,Medium,Pass,0,100.0,Certified KPIs are available for executive view
