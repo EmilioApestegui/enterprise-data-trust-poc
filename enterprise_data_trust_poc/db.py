@@ -63,7 +63,29 @@ def run_certified_pipeline(engine: Engine):
 
 
 def get_before_state(engine):
-    return pd.read_sql("kpi_submissions",engine)
+
+    df = pd.read_sql("SELECT * FROM kpi_submissions",engine)
+
+    if df.empty:
+        return df
+
+    pivot = (
+        df[df["kpi_name"]=="Revenue"]
+        .pivot_table(
+            index="report_month",
+            columns="function_name",
+            values="reported_value",
+            aggfunc="first"
+        )
+        .reset_index()
+    )
+
+    pivot["spread"] = (
+        pivot.iloc[:,1:].max(axis=1) -
+        pivot.iloc[:,1:].min(axis=1)
+    )
+
+    return pivot
 
 
 def get_kpi_registry(engine):
