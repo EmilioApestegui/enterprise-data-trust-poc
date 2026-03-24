@@ -22,8 +22,7 @@ from enterprise_data_trust_poc.db import (
     run_certified_pipeline,
     test_connection,
 )
-git add .
-git commit -m "Fix Procfile"
+
 st.set_page_config(page_title="Enterprise Data Trust Workbench", layout="wide")
 
 if "engine" not in st.session_state:
