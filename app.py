@@ -229,48 +229,76 @@ with tabs[4]:
     end_month = st.selectbox("End month", months, index=0)
 
     if st.button("Run trusted pipeline", type="primary", use_container_width=True):
-        summary_df = run_certified_pipeline(
-            engine,
-            None if start_month == "All" else start_month,
-            None if end_month == "All" else end_month,
-            region,
-            product,
-        )
+
+        summary_df = run_certified_pipeline(engine)
+
         st.session_state.summary_df = summary_df
 
+
     if st.session_state.summary_df is not None and not st.session_state.summary_df.empty:
+
         summary_df = st.session_state.summary_df.copy()
+
         total_actual = float(summary_df["actual_revenue"].sum())
         total_plan = float(summary_df["plan_revenue"].fillna(0).sum())
         total_variance = float(summary_df["variance"].fillna(0).sum())
+
         variance_pct = (total_variance / total_plan) if total_plan else 0.0
 
         k1, k2, k3, k4 = st.columns(4)
+
         k1.metric("Actual revenue", f"${total_actual:,.0f}")
         k2.metric("Plan revenue", f"${total_plan:,.0f}")
         k3.metric("Variance", f"${total_variance:,.0f}")
         k4.metric("Variance %", f"{variance_pct:.1%}")
 
         status_counts = summary_df["kpi_status"].value_counts().to_dict()
-        st.write(f"Certified rows: {status_counts.get('Certified', 0)} | Pending review rows: {status_counts.get('Pending Review', 0)}")
 
-        month_chart = summary_df.groupby("month_start", as_index=False)[["actual_revenue", "plan_revenue"]].sum().set_index("month_start")
+        st.write(
+            f"Certified rows: {status_counts.get('Certified', 0)} | Pending review rows: {status_counts.get('Pending Review', 0)}"
+        )
+
+        month_chart = (
+            summary_df
+            .groupby("month_start", as_index=False)[["actual_revenue","plan_revenue"]]
+            .sum()
+            .set_index("month_start")
+        )
+
         st.line_chart(month_chart)
 
-        variance_by_region = summary_df.groupby("region", as_index=False)["variance"].sum().set_index("region")
+        variance_by_region = (
+            summary_df
+            .groupby("region", as_index=False)["variance"]
+            .sum()
+            .set_index("region")
+        )
+
         st.bar_chart(variance_by_region)
 
         st.markdown("**Certified summary**")
-        st.dataframe(summary_df, use_container_width=True, hide_index=True)
+
+        st.dataframe(
+            summary_df,
+            use_container_width=True,
+            hide_index=True
+        )
 
         if st.button("Export certified summary", use_container_width=True):
+
             try:
+
                 paths = export_summary_to_desktop(summary_df)
+
                 st.success(f'Excel exported to {paths["xlsx"]}')
                 st.success(f'CSV exported to {paths["csv"]}')
+
             except Exception as exc:
+
                 st.error(str(exc))
+
     else:
+
         st.info("Run the trusted pipeline to populate the executive view.")
 
 with tabs[5]:
