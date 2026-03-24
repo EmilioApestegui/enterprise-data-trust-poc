@@ -37,7 +37,7 @@ def connect_app_engine():
     )
 
     if len(tables) == 0:
-        load_workbook_to_postgres(engine, WORKBOOK_PATH)
+        load_workbook_to_postgres(engine)
 
     return engine
 
