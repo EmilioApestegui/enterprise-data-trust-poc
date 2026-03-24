@@ -1,15 +1,11 @@
-
 from __future__ import annotations
-
-from pathlib import Path
 
 import pandas as pd
 import streamlit as st
 
-from enterprise_data_trust_poc.config import TARGET_DB, WORKBOOK_PATH, export_paths
+from enterprise_data_trust_poc.config import WORKBOOK_PATH, export_paths
 from enterprise_data_trust_poc.db import (
     app_engine,
-    ensure_database,
     export_summary_to_desktop,
     get_adoption,
     get_before_state,
@@ -31,9 +27,18 @@ if "summary_df" not in st.session_state:
     st.session_state.summary_df = None
 
 
-def connect_app_engine(host: str, port: str, user: str, password: str):
-    engine = app_engine(host, port, user, password, TARGET_DB)
+def connect_app_engine():
+    engine = app_engine()
     test_connection(engine)
+
+    tables = pd.read_sql(
+        "SELECT tablename FROM pg_tables WHERE schemaname='public'",
+        engine
+    )
+
+    if len(tables) == 0:
+        load_workbook_to_postgres(engine, WORKBOOK_PATH)
+
     return engine
 
 
@@ -51,50 +56,40 @@ st.title("Enterprise Data Trust Workbench")
 st.caption("A static PoC showing how governance, lineage, data quality, and adoption create trusted analytics.")
 
 with st.sidebar:
-    st.subheader("Connection")
-    host = st.text_input("Host", "localhost")
-    port = st.text_input("Port", "5432")
-    admin_db = st.text_input("Admin database", "postgres")
-    user = st.text_input("User", "postgres")
-    password = st.text_input("Password", "postgres", type="password")
-    st.text_input("Target database", TARGET_DB, disabled=True)
+    st.subheader("Application")
+    st.success("Railway auto-connect enabled")
+    st.write("Sample workbook")
+    st.code(str(WORKBOOK_PATH))
 
-    if st.button("1) Create database", use_container_width=True):
+    paths = export_paths()
+    st.write("Export paths")
+    st.code(f'Excel: {paths["xlsx"]}\nCSV: {paths["csv"]}')
+
+    if st.button("Connect app", use_container_width=True):
         try:
-            msg = ensure_database(host, port, admin_db, user, password, TARGET_DB)
-            st.success(msg)
+            st.session_state.engine = connect_app_engine()
+            st.success("Connected to application database.")
         except Exception as exc:
             st.error(str(exc))
 
-    if st.button("2) Load static sample data", use_container_width=True):
+    if st.button("Reload static sample data", use_container_width=True):
         try:
-            engine = connect_app_engine(host, port, user, password)
+            engine = connect_app_engine()
             loaded = load_workbook_to_postgres(engine, WORKBOOK_PATH)
             st.session_state.engine = engine
-            st.success("Loaded workbook tables into Postgres.")
+            st.success("Reloaded workbook tables into Postgres.")
             st.json(loaded)
         except Exception as exc:
             st.error(str(exc))
 
-    if st.button("3) Connect app", use_container_width=True):
-        try:
-            st.session_state.engine = connect_app_engine(host, port, user, password)
-            st.success(f"Connected to {TARGET_DB}.")
-        except Exception as exc:
-            st.error(str(exc))
-
-    st.divider()
-    st.write("Sample workbook")
-    st.code(str(WORKBOOK_PATH))
-    paths = export_paths()
-    st.write("Default desktop exports")
-    st.code(f'Excel: {paths["xlsx"]}\nCSV: {paths["csv"]}')
+if st.session_state.engine is None:
+    try:
+        st.session_state.engine = connect_app_engine()
+    except Exception as exc:
+        st.error(f"Database connection failed: {exc}")
+        st.stop()
 
 engine = st.session_state.engine
-
-if engine is None:
-    st.info("Use the sidebar to create/load/connect to the Postgres database first.")
-    st.stop()
 
 before_df = get_before_state(engine)
 registry_df = get_kpi_registry(engine)
@@ -215,9 +210,13 @@ with tabs[3]:
     st.dataframe(issue_df, use_container_width=True, hide_index=True)
 
 with tabs[4]:
-    st.subheader("Executive view: trusted analytics with context")
+    st.subheader("Executive view: trusted analytics")
 
-    actuals = pd.read_sql("SELECT DISTINCT month_start, region, product_category FROM sales_actuals ORDER BY month_start, region, product_category", engine, parse_dates=["month_start"])
+    actuals = pd.read_sql(
+        "SELECT DISTINCT month_start, region, product_category FROM sales_actuals ORDER BY month_start, region, product_category",
+        engine,
+        parse_dates=["month_start"]
+    )
     months = ["All"] + [d.strftime("%Y-%m-%d") for d in sorted(actuals["month_start"].dropna().unique())]
     regions = ["All"] + sorted(actuals["region"].dropna().unique().tolist())
     products = ["All"] + sorted(actuals["product_category"].dropna().unique().tolist())
@@ -264,7 +263,7 @@ with tabs[4]:
         st.markdown("**Certified summary**")
         st.dataframe(summary_df, use_container_width=True, hide_index=True)
 
-        if st.button("Export certified summary to desktop", use_container_width=True):
+        if st.button("Export certified summary", use_container_width=True):
             try:
                 paths = export_summary_to_desktop(summary_df)
                 st.success(f'Excel exported to {paths["xlsx"]}')
