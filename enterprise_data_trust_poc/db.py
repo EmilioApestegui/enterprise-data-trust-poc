@@ -13,29 +13,54 @@ from .config import TARGET_DB, WORKBOOK_PATH, export_paths
 
 
 def app_engine():
+
     database_url = os.getenv("DATABASE_URL")
 
     if database_url:
         return create_engine(database_url)
 
-    # fallback for local testing
+    # Local fallback
     return create_engine(
         "postgresql+psycopg2://postgres:postgres@localhost:5432/enterprise_data_trust_poc"
     )
 
 
 def test_connection(engine: Engine):
+
     with engine.connect() as conn:
         conn.execute(text("SELECT 1"))
 
 
 def load_workbook_to_postgres(engine: Engine):
+
     workbook = pd.read_excel(WORKBOOK_PATH, sheet_name=None)
 
     loaded = {}
 
     for table_name, df in workbook.items():
-        df.to_sql(table_name, engine, if_exists="replace", index=False)
+
+        # normalize date fields
+        for col in df.columns:
+
+            if (
+                "date" in col
+                or "month_start" in col
+                or col.endswith("_at")
+                or col.endswith("_time")
+            ):
+
+                try:
+                    df[col] = pd.to_datetime(df[col])
+                except:
+                    pass
+
+        df.to_sql(
+            table_name,
+            engine,
+            if_exists="replace",
+            index=False
+        )
+
         loaded[table_name] = len(df)
 
     return loaded
@@ -47,9 +72,57 @@ def run_certified_pipeline(engine: Engine):
     plan = pd.read_sql("sales_plan", engine)
 
     summary = (
-        actuals.groupby(["month_start","region","product_category"])
-        .agg(actual_revenue=("net_revenue","sum"))
-        .reset_index()
+        actuals.groupby(
+            ["month_start","region","product_category"],
+            as_index=False
+        )
+        .agg(
+            actual_revenue=("net_revenue","sum"),
+            gross_sales=("gross_sales","sum"),
+            returns_amount=("returns_amount","sum"),
+            units_sold=("units_sold","sum"),
+            inventory_on_hand=("inventory_on_hand","sum"),
+            missing_feeds=("feed_received_flag",
+                lambda s: int((s!="Y").sum())
+            )
+        )
+        .merge(
+            plan[
+                [
+                    "month_start",
+                    "region",
+                    "product_category",
+                    "plan_revenue",
+                    "plan_units"
+                ]
+            ],
+            on=["month_start","region","product_category"],
+            how="left"
+        )
+    )
+
+    summary["variance"] = (
+        summary["actual_revenue"] -
+        summary["plan_revenue"]
+    )
+
+    summary["variance_pct"] = np.where(
+        summary["plan_revenue"].fillna(0)!=0,
+        summary["variance"]/summary["plan_revenue"],
+        np.nan
+    )
+
+    summary["kpi_status"] = np.where(
+        summary["plan_revenue"].isna() |
+        (summary["missing_feeds"]>0),
+        "Pending Review",
+        "Certified"
+    )
+
+    summary["owner"] = "VP Finance"
+
+    summary["definition"] = (
+        "Net revenue after returns and approved adjustments"
     )
 
     summary.to_sql(
@@ -64,7 +137,7 @@ def run_certified_pipeline(engine: Engine):
 
 def get_before_state(engine):
 
-    df = pd.read_sql("SELECT * FROM kpi_submissions",engine)
+    df = pd.read_sql("kpi_submissions",engine)
 
     if df.empty:
         return df
@@ -117,6 +190,7 @@ def export_summary_to_desktop(df):
     paths = export_paths()
 
     df.to_excel(paths["xlsx"],index=False)
+
     df.to_csv(paths["csv"],index=False)
 
     return paths
