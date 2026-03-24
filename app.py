@@ -320,7 +320,7 @@ with tabs[6]:
 
     st.header("Executive Briefing")
 
-    pdf_path = Path("enterprise_data_trust_poc/data/executive_briefing.pdf")
+    pdf_path = Path("data/executive_briefing.pdf")
 
     if pdf_path.exists():
 
